@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Card</title>
+        <style>
+            body {
+                display: grid;
+                place-items: center;
+                margin: 0;
+                height: 97.7vh;
+                background-image: url(./blob-scene-haikei.svg);
+                background-size: cover;
+                background-position: center;
+                color: #fff;
+                font-family: Comfortaa;
+            }
+            .container {
+                margin: 96px;
+                display: flex;
+                flex-direction: row;
+                gap: 12px;
+                overflow: hidden;
+                background-color: rgba(69, 50, 35, 0.467);
+                border-radius: 5px;
+                height: 300px;
+            }
+            .img {
+                flex: 1 0 30%;
+                background-image: url(./img.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .img img {
+                width: 100%;
+                height: auto;
+                transform: scaleY(1.08);
+            }
+            .description {
+                flex: 0 1 70%;
+            }
+            @media (max-width: 1024px) {
+                .img {
+                    flex: 1 0 40%;
+                }
+                .description {
+                    flex: 0 1 60%;
+                }
+            }
+            @media (max-width: 864px) {
+                .container {
+                    flex-direction: column;
+                    height: 400px;
+                }
+                .description {
+                    padding: 12px;
+                }
+            }
+            @media (max-width: 640px) {
+                .container {
+                    margin: 12px;
+                    flex-direction: column;
+                }
+                .container p {
+                    font-size: 13px;
+                }
+            }
+            @media (max-width: 425px) {
+                .container {
+                    height: 500px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="img">
+                <!-- <img src="./img.jpg" alt="" /> -->
+            </div>
+            <div class="description">
+                <h1>Osaka Station</h1>
+                <p>Osaka Station in Osaka, Japan</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Harum perspiciatis esse beatae sed vero fugiat modi enim
+                    quam cum magni! Magnam aut itaque nulla deleniti sed nemo
+                    repellendus nam laboriosam!
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
